@@ -16,7 +16,7 @@ public class UserController {
     public User getUserInfo(@PathVariable Long id) {
         // 没有使用注册中心 IP+PORT方式
         // return restTemplate.getForObject("http://localhost:8080/provider"+id, User.class);
-        return restTemplate.getForObject("http://spring-cloud-provider/provider/" + id, User.class);
+        return restTemplate.getForObject("http://springcloud-client/provider/" + id, User.class);
     }
 
 }
